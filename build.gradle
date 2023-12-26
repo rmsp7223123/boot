@@ -18,8 +18,16 @@ repositories {
 dependencies {
 	// RESTful서비스
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	//Junit, Hamcrest, Mockito를 포함하는 스프링 어플리케이션을 테스트 가능
+	// Junit, Hamcrest, Mockito를 포함하는 스프링 어플리케이션을 테스트 가능
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// 톰캣
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+	//스프링부트 3.0 이상
+	implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
 }
 
 tasks.named('test') {
